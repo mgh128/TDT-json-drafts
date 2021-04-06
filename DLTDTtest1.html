@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="application/json" id="tdtfile">
+{
+    "tdt:epcTagDataTranslation": {
+        "version": 1.6,
+        "date": "2011-01-20T12:20:00Z",
+        "epcTDSVersion": 1.6,
+        "xmlns:tdt": "urn:epcglobal:tdt:xsd:1",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xsi:schemaLocation": "urn:epcglobal:tdt:xsd:1 EpcTagDataTranslation.xsd",
+        "scheme": {
+            "name": "SGTIN-96",
+            "optionKey": "gs1companyprefixlength",
+            "tagLength": 96,
+            "level": [
+                {
+                    "type": "BINARY",
+                    "prefixMatch": "00110000",
+                    "requiredFormattingParameters": "filter,taglength",
+                    "option": [
+                        {
+                            "optionKey": 12,
+                            "pattern": "00110000([01]{3})000([01]{40})([01]{4})([01]{38})",
+                            "grammar": "'00110000' filter '000' gs1companyprefix itemref serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 3,
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999999999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 40,
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 4,
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 38,
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 11,
+                            "pattern": "00110000([01]{3})001([01]{37})([01]{7})([01]{38})",
+                            "grammar": "'00110000' filter '001' gs1companyprefix itemref serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 3,
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 37,
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 7,
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 38,
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 10,
+                            "pattern": "00110000([01]{3})010([01]{34})([01]{10})([01]{38})",
+                            "grammar": "'00110000' filter '010' gs1companyprefix itemref serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 3,
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 34,
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 10,
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 38,
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 9,
+                            "pattern": "00110000([01]{3})011([01]{30})([01]{14})([01]{38})",
+                            "grammar": "'00110000' filter '011' gs1companyprefix itemref serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 3,
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 30,
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 14,
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 38,
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 8,
+                            "pattern": "00110000([01]{3})100([01]{27})([01]{17})([01]{38})",
+                            "grammar": "'00110000' filter '100' gs1companyprefix itemref serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 3,
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 27,
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 17,
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 38,
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 7,
+                            "pattern": "00110000([01]{3})101([01]{24})([01]{20})([01]{38})",
+                            "grammar": "'00110000' filter '101' gs1companyprefix itemref serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 3,
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 24,
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 20,
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 38,
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 6,
+                            "pattern": "00110000([01]{3})110([01]{20})([01]{24})([01]{38})",
+                            "grammar": "'00110000' filter '110' gs1companyprefix itemref serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 3,
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 20,
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 24,
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[01]*",
+                                    "bitPadDir": "LEFT",
+                                    "bitLength": 38,
+                                    "name": "serial"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TAG_ENCODING",
+                    "prefixMatch": "urn:epc:tag:sgtin-96",
+                    "requiredFormattingParameters": "filter,taglength",
+                    "option": [
+                        {
+                            "optionKey": 12,
+                            "pattern": "urn:epc:tag:sgtin-96:([0-7]{1})\\.([0-9]{12})\\.([0-9]{1})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:tag:sgtin-96:' filter '.' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[0-7]*",
+                                    "length": 1,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 12,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9,
+                                    "characterSet": "[0-9]*",
+                                    "length": 1,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 11,
+                            "pattern": "urn:epc:tag:sgtin-96:([0-7]{1})\\.([0-9]{11})\\.([0-9]{2})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:tag:sgtin-96:' filter '.' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[0-7]*",
+                                    "length": 1,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 11,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99,
+                                    "characterSet": "[0-9]*",
+                                    "length": 2,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 10,
+                            "pattern": "urn:epc:tag:sgtin-96:([0-7]{1})\\.([0-9]{10})\\.([0-9]{3})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:tag:sgtin-96:' filter '.' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[0-7]*",
+                                    "length": 1,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 10,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 3,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 9,
+                            "pattern": "urn:epc:tag:sgtin-96:([0-7]{1})\\.([0-9]{9})\\.([0-9]{4})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:tag:sgtin-96:' filter '.' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[0-7]*",
+                                    "length": 1,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 9,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 4,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 8,
+                            "pattern": "urn:epc:tag:sgtin-96:([0-7]{1})\\.([0-9]{8})\\.([0-9]{5})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:tag:sgtin-96:' filter '.' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[0-7]*",
+                                    "length": 1,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 8,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 5,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 7,
+                            "pattern": "urn:epc:tag:sgtin-96:([0-7]{1})\\.([0-9]{7})\\.([0-9]{6})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:tag:sgtin-96:' filter '.' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[0-7]*",
+                                    "length": 1,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 7,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 6,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 6,
+                            "pattern": "urn:epc:tag:sgtin-96:([0-7]{1})\\.([0-9]{6})\\.([0-9]{7})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:tag:sgtin-96:' filter '.' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 7,
+                                    "characterSet": "[0-7]*",
+                                    "length": 1,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "filter"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 6,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 7,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 4,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "PURE_IDENTITY",
+                    "prefixMatch": "urn:epc:id:sgtin",
+                    "option": [
+                        {
+                            "optionKey": 12,
+                            "pattern": "urn:epc:id:sgtin:([0-9]{12})\\.([0-9]{1})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:id:sgtin:' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 12,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9,
+                                    "characterSet": "[0-9]*",
+                                    "length": 1,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 11,
+                            "pattern": "urn:epc:id:sgtin:([0-9]{11})\\.([0-9]{2})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:id:sgtin:' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 11,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99,
+                                    "characterSet": "[0-9]*",
+                                    "length": 2,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 10,
+                            "pattern": "urn:epc:id:sgtin:([0-9]{10})\\.([0-9]{3})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:id:sgtin:' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 10,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 3,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 9,
+                            "pattern": "urn:epc:id:sgtin:([0-9]{9})\\.([0-9]{4})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:id:sgtin:' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 9,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 4,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 8,
+                            "pattern": "urn:epc:id:sgtin:([0-9]{8})\\.([0-9]{5})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:id:sgtin:' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 8,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 5,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 7,
+                            "pattern": "urn:epc:id:sgtin:([0-9]{7})\\.([0-9]{6})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:id:sgtin:' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 7,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 6,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 6,
+                            "pattern": "urn:epc:id:sgtin:([0-9]{6})\\.([0-9]{7})\\.([0-9]{1,12})",
+                            "grammar": "'urn:epc:id:sgtin:' gs1companyprefix '.' itemref '.' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 6,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 7,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 3,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "LEGACY",
+                    "prefixMatch": "gtin=",
+                    "requiredParsingParameters": "gs1companyprefixlength",
+                    "option": [
+                        {
+                            "optionKey": 12,
+                            "pattern": "gtin=([0-9]{14});serial=([0-9]{1,12})",
+                            "grammar": "'gtin=' indicatordigit gs1companyprefix itemrefremainder checkdigit ';serial=' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 11,
+                            "pattern": "gtin=([0-9]{14});serial=([0-9]{1,12})",
+                            "grammar": "'gtin=' indicatordigit gs1companyprefix itemrefremainder checkdigit ';serial=' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 10,
+                            "pattern": "gtin=([0-9]{14});serial=([0-9]{1,12})",
+                            "grammar": "'gtin=' indicatordigit gs1companyprefix itemrefremainder checkdigit ';serial=' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 9,
+                            "pattern": "gtin=([0-9]{14});serial=([0-9]{1,12})",
+                            "grammar": "'gtin=' indicatordigit gs1companyprefix itemrefremainder checkdigit ';serial=' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 8,
+                            "pattern": "gtin=([0-9]{14});serial=([0-9]{1,12})",
+                            "grammar": "'gtin=' indicatordigit gs1companyprefix itemrefremainder checkdigit ';serial=' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 7,
+                            "pattern": "gtin=([0-9]{14});serial=([0-9]{1,12})",
+                            "grammar": "'gtin=' indicatordigit gs1companyprefix itemrefremainder checkdigit ';serial=' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 6,
+                            "pattern": "gtin=([0-9]{14});serial=([0-9]{1,12})",
+                            "grammar": "'gtin=' indicatordigit gs1companyprefix itemrefremainder checkdigit ';serial=' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        }
+                    ],
+                    "rule": [
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 1,
+                            "newFieldName": "gtinprefixremainder",
+                            "characterSet": "[0-9]*",
+                            "length": 12,
+                            "function": "SUBSTR(gtin,1,12)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 2,
+                            "newFieldName": "indicatordigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "SUBSTR(gtin,0,1)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 3,
+                            "newFieldName": "itemrefremainder",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(gtinprefixremainder,gs1companyprefixlength)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 4,
+                            "newFieldName": "itemref",
+                            "characterSet": "[0-9]*",
+                            "function": "CONCAT(indicatordigit,itemrefremainder)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 5,
+                            "newFieldName": "gs1companyprefix",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(gtinprefixremainder,0,gs1companyprefixlength)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 1,
+                            "newFieldName": "indicatordigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "SUBSTR(itemref,0,1)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 2,
+                            "newFieldName": "itemrefremainder",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(itemref,1)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 3,
+                            "newFieldName": "gtinprefix",
+                            "characterSet": "[0-9]*",
+                            "length": 13,
+                            "function": "CONCAT(indicatordigit,gs1companyprefix,itemrefremainder)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 4,
+                            "newFieldName": "checkdigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "GS1CHECKSUM(gtinprefix)"
+                        }
+                    ]
+                },
+                {
+                    "type": "LEGACY_AI",
+                    "prefixMatch": "(01)",
+                    "requiredParsingParameters": "gs1companyprefixlength",
+                    "option": [
+                        {
+                            "optionKey": 12,
+                            "pattern": "\\(01\\)([0-9]{14})\\(21\\)([0-9]{1,12})",
+                            "grammar": "'(01)' indicatordigit gs1companyprefix itemrefremainder checkdigit '(21)' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 11,
+                            "pattern": "\\(01\\)([0-9]{14})\\(21\\)([0-9]{1,12})",
+                            "grammar": "'(01)' indicatordigit gs1companyprefix itemrefremainder checkdigit '(21)' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 10,
+                            "pattern": "\\(01\\)([0-9]{14})\\(21\\)([0-9]{1,12})",
+                            "grammar": "'(01)' indicatordigit gs1companyprefix itemrefremainder checkdigit '(21)' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 9,
+                            "pattern": "\\(01\\)([0-9]{14})\\(21\\)([0-9]{1,12})",
+                            "grammar": "'(01)' indicatordigit gs1companyprefix itemrefremainder checkdigit '(21)' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 8,
+                            "pattern": "\\(01\\)([0-9]{14})\\(21\\)([0-9]{1,12})",
+                            "grammar": "'(01)' indicatordigit gs1companyprefix itemrefremainder checkdigit '(21)' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 7,
+                            "pattern": "\\(01\\)([0-9]{14})\\(21\\)([0-9]{1,12})",
+                            "grammar": "'(01)' indicatordigit gs1companyprefix itemrefremainder checkdigit '(21)' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 6,
+                            "pattern": "\\(01\\)([0-9]{14})\\(21\\)([0-9]{1,12})",
+                            "grammar": "'(01)' indicatordigit gs1companyprefix itemrefremainder checkdigit '(21)' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        }
+                    ],
+                    "rule": [
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 1,
+                            "newFieldName": "gtinprefixremainder",
+                            "characterSet": "[0-9]*",
+                            "length": 12,
+                            "function": "SUBSTR(gtin,1,12)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 2,
+                            "newFieldName": "indicatordigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "SUBSTR(gtin,0,1)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 3,
+                            "newFieldName": "itemrefremainder",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(gtinprefixremainder,gs1companyprefixlength)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 4,
+                            "newFieldName": "itemref",
+                            "characterSet": "[0-9]*",
+                            "function": "CONCAT(indicatordigit,itemrefremainder)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 5,
+                            "newFieldName": "gs1companyprefix",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(gtinprefixremainder,0,gs1companyprefixlength)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 1,
+                            "newFieldName": "indicatordigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "SUBSTR(itemref,0,1)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 2,
+                            "newFieldName": "itemrefremainder",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(itemref,1)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 3,
+                            "newFieldName": "gtinprefix",
+                            "characterSet": "[0-9]*",
+                            "length": 13,
+                            "function": "CONCAT(indicatordigit,gs1companyprefix,itemrefremainder)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 4,
+                            "newFieldName": "checkdigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "GS1CHECKSUM(gtinprefix)"
+                        }
+                    ]
+                },
+                {
+                    "type": "ELEMENT_STRING",
+                    "prefixMatch": "01",
+                    "requiredParsingParameters": "gs1companyprefixlength",
+                    "option": [
+                        {
+                            "optionKey": 12,
+                            "pattern": "01([0-9]{14})21([0-9]{1,12})",
+                            "grammar": "'01' indicatordigit gs1companyprefix itemrefremainder checkdigit '21' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 11,
+                            "pattern": "01([0-9]{14})21([0-9]{1,12})",
+                            "grammar": "'01' indicatordigit gs1companyprefix itemrefremainder checkdigit '21' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 10,
+                            "pattern": "01([0-9]{14})21([0-9]{1,12})",
+                            "grammar": "'01' indicatordigit gs1companyprefix itemrefremainder checkdigit '21' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 9,
+                            "pattern": "01([0-9]{14})21([0-9]{1,12})",
+                            "grammar": "'01' indicatordigit gs1companyprefix itemrefremainder checkdigit '21' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 8,
+                            "pattern": "01([0-9]{14})21([0-9]{1,12})",
+                            "grammar": "'01' indicatordigit gs1companyprefix itemrefremainder checkdigit '21' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 7,
+                            "pattern": "01([0-9]{14})21([0-9]{1,12})",
+                            "grammar": "'01' indicatordigit gs1companyprefix itemrefremainder checkdigit '21' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 6,
+                            "pattern": "01([0-9]{14})21([0-9]{1,12})",
+                            "grammar": "'01' indicatordigit gs1companyprefix itemrefremainder checkdigit '21' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        }
+                    ],
+                    "rule": [
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 1,
+                            "newFieldName": "gtinprefixremainder",
+                            "characterSet": "[0-9]*",
+                            "length": 12,
+                            "function": "SUBSTR(gtin,1,12)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 2,
+                            "newFieldName": "indicatordigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "SUBSTR(gtin,0,1)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 3,
+                            "newFieldName": "itemrefremainder",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(gtinprefixremainder,gs1companyprefixlength)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 4,
+                            "newFieldName": "itemref",
+                            "characterSet": "[0-9]*",
+                            "function": "CONCAT(indicatordigit,itemrefremainder)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 5,
+                            "newFieldName": "gs1companyprefix",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(gtinprefixremainder,0,gs1companyprefixlength)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 1,
+                            "newFieldName": "indicatordigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "SUBSTR(itemref,0,1)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 2,
+                            "newFieldName": "itemrefremainder",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(itemref,1)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 3,
+                            "newFieldName": "gtinprefix",
+                            "characterSet": "[0-9]*",
+                            "length": 13,
+                            "function": "CONCAT(indicatordigit,gs1companyprefix,itemrefremainder)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 4,
+                            "newFieldName": "checkdigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "GS1CHECKSUM(gtinprefix)"
+                        }
+                    ]
+                },
+                {
+                    "type": "GS1_DIGITAL_LINK",
+                    "prefixMatch": "http",
+                    "requiredParsingParameters": "gs1companyprefixlength",
+                    "option": [
+                        {
+                            "optionKey": 12,
+                            "pattern": "https:\/\/id.gs1.org\/01\/([0-9]{14})\/21\/([0-9]{1,12})",
+                            "grammar": "'https://id.gs1.org/01/' indicatordigit gs1companyprefix itemrefremainder checkdigit '/21/' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 11,
+                            "pattern": "https:\/\/id.gs1.org\/01\/([0-9]{14})\/21\/([0-9]{1,12})",
+                            "grammar": "'https://id.gs1.org/01/' indicatordigit gs1companyprefix itemrefremainder checkdigit '/21/' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 10,
+                            "pattern": "https:\/\/id.gs1.org\/01\/([0-9]{14})\/21\/([0-9]{1,12})",
+                            "grammar": "'https://id.gs1.org/01/' indicatordigit gs1companyprefix itemrefremainder checkdigit '/21/' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 9,
+                            "pattern": "https:\/\/id.gs1.org\/01\/([0-9]{14})\/21\/([0-9]{1,12})",
+                            "grammar": "'https://id.gs1.org/01/' indicatordigit gs1companyprefix itemrefremainder checkdigit '/21/' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 8,
+                            "pattern": "https:\/\/id.gs1.org\/01\/([0-9]{14})\/21\/([0-9]{1,12})",
+                            "grammar": "'https://id.gs1.org/01/' indicatordigit gs1companyprefix itemrefremainder checkdigit '/21/' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 7,
+                            "pattern": "https:\/\/id.gs1.org\/01\/([0-9]{14})\/21\/([0-9]{1,12})",
+                            "grammar": "'https://id.gs1.org/01/' indicatordigit gs1companyprefix itemrefremainder checkdigit '/21/' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 6,
+                            "pattern": "https:\/\/id.gs1.org\/01\/([0-9]{14})\/21\/([0-9]{1,12})",
+                            "grammar": "'https://id.gs1.org/01/' indicatordigit gs1companyprefix itemrefremainder checkdigit '/21/' serial",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 14,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gtin"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 274877906943,
+                                    "characterSet": "[0-9]*",
+                                    "name": "serial"
+                                }
+                            ]
+                        }
+                    ],
+                    "rule": [
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 1,
+                            "newFieldName": "gtinprefixremainder",
+                            "characterSet": "[0-9]*",
+                            "length": 12,
+                            "function": "SUBSTR(gtin,1,12)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 2,
+                            "newFieldName": "indicatordigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "SUBSTR(gtin,0,1)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 3,
+                            "newFieldName": "itemrefremainder",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(gtinprefixremainder,gs1companyprefixlength)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 4,
+                            "newFieldName": "itemref",
+                            "characterSet": "[0-9]*",
+                            "function": "CONCAT(indicatordigit,itemrefremainder)"
+                        },
+                        {
+                            "type": "EXTRACT",
+                            "inputFormat": "STRING",
+                            "seq": 5,
+                            "newFieldName": "gs1companyprefix",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(gtinprefixremainder,0,gs1companyprefixlength)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 1,
+                            "newFieldName": "indicatordigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "SUBSTR(itemref,0,1)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 2,
+                            "newFieldName": "itemrefremainder",
+                            "characterSet": "[0-9]*",
+                            "function": "SUBSTR(itemref,1)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 3,
+                            "newFieldName": "gtinprefix",
+                            "characterSet": "[0-9]*",
+                            "length": 13,
+                            "function": "CONCAT(indicatordigit,gs1companyprefix,itemrefremainder)"
+                        },
+                        {
+                            "type": "FORMAT",
+                            "inputFormat": "STRING",
+                            "seq": 4,
+                            "newFieldName": "checkdigit",
+                            "characterSet": "[0-9]*",
+                            "length": 1,
+                            "function": "GS1CHECKSUM(gtinprefix)"
+                        }
+                    ]
+                },
+                {
+                    "type": "ONS_HOSTNAME",
+                    "option": [
+                        {
+                            "optionKey": 12,
+                            "grammar": "itemref '.' gs1companyprefix '.sgtin.id.onsepc.com'",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9,
+                                    "characterSet": "[0-9]*",
+                                    "length": 1,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 12,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 11,
+                            "grammar": "itemref '.' gs1companyprefix '.sgtin.id.onsepc.com'",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99,
+                                    "characterSet": "[0-9]*",
+                                    "length": 2,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 11,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 10,
+                            "grammar": "itemref '.' gs1companyprefix '.sgtin.id.onsepc.com'",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 3,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 10,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 9,
+                            "grammar": "itemref '.' gs1companyprefix '.sgtin.id.onsepc.com'",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 4,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 9,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 8,
+                            "grammar": "itemref '.' gs1companyprefix '.sgtin.id.onsepc.com'",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 5,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 99999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 8,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 7,
+                            "grammar": "itemref '.' gs1companyprefix '.sgtin.id.onsepc.com'",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 6,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 7,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                }
+                            ]
+                        },
+                        {
+                            "optionKey": 6,
+                            "grammar": "itemref '.' gs1companyprefix '.sgtin.id.onsepc.com'",
+                            "field": [
+                                {
+                                    "seq": 1,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 9999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 7,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "itemref"
+                                },
+                                {
+                                    "seq": 2,
+                                    "decimalMinimum": 0,
+                                    "decimalMaximum": 999999,
+                                    "characterSet": "[0-9]*",
+                                    "length": 6,
+                                    "padChar": 0,
+                                    "padDir": "LEFT",
+                                    "name": "gs1companyprefix"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
+</script>
+<style type="text/css">
+body {font-family: Verdana, Geneva, Arial, Helvetica;}
+.fullwidth {width: 100%; }
+.medium {font-size: 1.2em;}
+.large {font-size: 1.5em;}
+input.demo {font-size: 1.5em; background-color: #00FF00; color: #FFFFFF;}
+input.clear {font-size: 1.5em; background-color: #666666; color: #FFFFFF;}
+.toggles {width: 100%; font-size: 1.2em;}
+.toggle1 {float:left;}
+.toggle2 {float:right;}
+#tdtdata {width: 100%; height: 50vh; font-size: 1em;}
+</style>
+
+</head>
+<body>
+<h1>EPC / TDT decoding to uncompressed GS1 Digital Link URI</h1>
+
+<div id="app1">
+<h2>Special compressed GS1 Digital Link URI</h2>
+<input type="text" v-model="inputURI" id="inputURI" class="fullwidth large"><br/>&nbsp;<br/>
+
+<input type="button" @click="setURI(uri1)" value="Demo1" class="demo">
+<input type="button" @click="setURI(uri2)" value="Demo2" class="demo">
+<input type="button" @click="clearURI()" value="Clear" class="clear">
+<hr>
+<h2>Output: uncompressed (decoded) GS1 Digital Link URI</h2>
+<input type="text" v-model="outputDL" readonly="true"  class="fullwidth large">
+<hr/>
+&nbsp;
+<br/>
+<div class="toggles"><input type="button" @click="toggleMode(1)" value="Look inside" class="toggle1"><input type="button" @click="toggleMode(2)" value="View TDT data" class="toggle2"></div>
+&nbsp;
+<br/>
+<div v-if="mode == 2">
+<textarea id="tdtdata"></textarea>
+</div>
+<div v-if="mode == 1">
+<h3>Binary EPC string</h3>
+<input type="text" v-model="binaryString"  class="fullwidth medium">
+
+<h3>Matching pattern</h3>
+<p>{{tdt.matchingPattern}}</p>
+<h3>Option Key</h3>
+<input type="text" v-model="tdt.optionKey" readonly="true"  class="medium">
+<h3>Data fields (extracted from binary)</h3>
+<table>
+<tr v-for="i in fieldKeys1"><td>{{i}}</td><td>{{tdt.extracted[i]}}</td></tr>
+</table>
+<h3>Data fields (after padding)</h3>
+<table>
+<tr v-for="j in fieldKeys2"><td>{{j}}</td><td>{{tdt.padded[j]}}</td></tr>
+</table>
+<br/>
+<h3>Formatting Rules</h3>
+<ol>
+<li v-for="r in tdt.targetRules">{{r.newFieldName}} = {{r.function}}</li>
+</ol>
+<h3>Data fields (after processing formatting rules)</h3>
+<table>
+<tr v-for="k in fieldKeys3"><td>{{k}}</td><td>{{tdt.fieldObj[k]}}</td></tr>
+</table>
+<h3>Final output grammar</h3>
+<p>{{tdt.targetGrammar}}</p>
+</div>
+
+</div>
+
+
+
+<script language="javascript">
+const alpha=new RegExp("^[a-z]+[a-z0-9]+");
+const dequote=new RegExp("^'(.+?)'$");
+const filesafeBase64alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
+const hexAlphabet="0123456789ABCDEF";
+const tdt=JSON.parse(document.getElementById("tdtfile").innerHTML)["tdt:epcTagDataTranslation"];
+
+document.getElementById("tdtdata").innerHTML = document.getElementById("tdtfile").innerHTML;
+
+let inputURI="";
+let uri1="https://example.com/eh30164596F40C0E5CBE991A83";
+let uri2="https://example.com/exMBZFlvQMDly-mRqD";
+let outputDL="";
+let mode=0;
+
+let app1 = new Vue({
+		el: "#app1",
+		data : {
+			uri1:uri1,
+			uri2:uri2,
+			inputURI:inputURI,
+			mode:mode
+			},
+		computed: {
+			binaryString: function() {
+				let c="";
+				let b="";
+				if (this.inputURI > "") {
+					let qs="";
+					let bf=this.inputURI;
+					let qsi=this.inputURI.indexOf("?");
+					if (qsi> -1) {
+						qr=this.inputURI.substr(qsi);
+						bf=bf.substr(0,qsi);
+					}
+					let soi=bf.lastIndexOf("/");
+					c=bf.substr(1+soi);
+					if (c.indexOf("eh") == 0) {
+						b=stringToBinary(c.substr(2),hexAlphabet,4);
+					}
+					if (c.indexOf("ex") == 0) {
+						b=stringToBinary(c.substr(2),filesafeBase64alphabet,6);
+					}
+					
+				}
+				return b;
+			},
+			outputDL : function() {
+				return binaryToDL(this.binaryString).result;
+			},
+			tdt : function() {
+				return binaryToDL(this.binaryString);
+			},
+			fieldKeys1 : function() {
+				let rv=[];
+				if (this.tdt.hasOwnProperty("extracted")) {
+					rv=Object.keys(this.tdt.extracted);
+				}
+				return rv;
+			},		
+			fieldKeys2 : function() {
+				let rv=[];
+				if (this.tdt.hasOwnProperty("padded")) {
+					rv=Object.keys(this.tdt.padded);
+				}
+				return rv;
+			},		
+			fieldKeys3 : function() {
+				let rv=[];
+				if (this.tdt.hasOwnProperty("fieldObj")) {
+					rv=Object.keys(this.tdt.fieldObj);
+				}
+				return rv;
+			}		
+		},
+		methods: {
+			setURI: function(el) {
+				this.inputURI=el;
+			},
+			clearURI: function() {
+				this.inputURI="";
+			},
+			toggleMode: function(v) {
+			    if (this.mode == 0) { this.mode = v } else { this.mode = 0 }
+			} 
+		}
+		});
+
+
+function stringToBinary(input,alphabet,padLength) {
+	let r="";
+	for (let i=0; i<input.length; i++) {
+		let c=input.charAt(i);
+		let j=alphabet.indexOf(c);
+		let b=j.toString(2);
+		if (b.length < padLength) {
+		b="0".repeat(padLength-b.length)+b;
+		}
+		r+=b;
+	}
+	return r;
+}
+
+function byType(type) {
+    return function(element) {
+        return element.type == type;
+    }
+}
+
+function byOptionKey(o) {
+    return function(element) {
+        return element.optionKey == o;
+    }
+}
+
+function bySeq(a,b) {
+	return a.seq  - b.seq;
+}
+
+
+
+
+
+
+let b1=stringToBinary("30164596F40C0E5CBE991A83",hexAlphabet,4);
+let b2=stringToBinary("MBZFlvQMDly-mRqD",filesafeBase64alphabet,6);
+
+console.log("b1="+b1);
+console.log("b2="+b2);
+
+
+let dl=binaryToDL(b1);
+console.log("dl="+dl);
+
+
+function substitute(arr,fieldObj) {	
+	arr.shift();					
+	let a=[];
+	for (let rfi=0; rfi<arr.length; rfi++) {
+		if (alpha.test(arr[rfi])) {
+			a.push(fieldObj[arr[rfi]]);
+		} else {
+			a.push(parseInt(arr[rfi]));
+		}
+	}
+	return a;
+}
+
+
+function calculateCheckDigit(gs1IDValue) {
+	let rv="";
+	let counter=0;
+	let reversed="";
+	let total=0;
+	let l;
+		l = gs1IDValue.length;
+	let multiplier;
+	for (let i=l-1; i>=0; i--) {
+		let d=gs1IDValue.substring(i,(i+1));
+		if ((counter % 2) == 0) {
+			multiplier=3;
+		} else {
+			multiplier=1;
+		}
+		total+=(d*multiplier);
+		counter++;
+	}
+	let expectedCheckDigit=(10-(total%10))%10;
+	return expectedCheckDigit;
+}
+
+
+
+function binaryToDL(b) {
+	let rv={};
+	let fn1=new RegExp("^SUBSTR\\(([^,]+?),([^,]+?),([^,]+?)\\)$");
+	let fn2=new RegExp("^SUBSTR\\(([^,]+?),([^,]+?)\\)$");
+	let fn3=new RegExp("^CONCAT\\((.+?)\\)$");
+	let fn4=new RegExp("^GS1CHECKSUM\\((.+?)\\)$");
+
+
+	let levels=tdt.scheme.level;
+	let sourceLevel=levels.filter(byType("BINARY"))[0];
+	let tagEncodingLevel=levels.filter(byType("TAG_ENCODING"))[0];
+	let targetLevel=levels.filter(byType("GS1_DIGITAL_LINK"))[0];
+
+	let prefixMatch=sourceLevel.prefixMatch;
+	if (b.indexOf(prefixMatch) == 0) {
+		// binary prefix matched
+		let options=sourceLevel.option;
+		let sourceRules=[];
+		if (sourceLevel.hasOwnProperty("rule")) {
+			sourceRules = sourceLevel.rule;
+		}
+		sourceRules=sourceRules.filter(byType("EXTRACT")).sort(bySeq);
+		let targetRules=[];
+		if (targetLevel.hasOwnProperty("rule")) {
+			targetRules = targetLevel.rule;
+		}
+		targetRules=targetRules.filter(byType("FORMAT")).sort(bySeq);
+
+		let fieldObj={};
+		let optionKey="";
+
+		for (let oi=0; oi<options.length; oi++) {
+			let o=options[oi];
+			let re=new RegExp("^"+o.pattern);
+			if (re.test(b)) {
+				rv.matchingPattern=o.pattern;
+				optionKey=o.optionKey;
+				let m=re.exec(b);
+				let fields=o.field;
+				for (let fi=0; fi<fields.length; fi++) {
+					let field=fields[fi];
+					let s=field.seq;
+					let v=m[s];
+					let val="";
+					if ((field.hasOwnProperty("decimalMaximum")) && (field.hasOwnProperty("decimalMinimum"))) {
+						val=parseInt(v,2);
+						if (val < field.decimalMinimum) {
+							throw("Value "+val+" of field "+field.name+" is less than expected minimum "+field.decimalMinimum);
+						}		
+						if (val > field.decimalMaximum) {
+							throw("Value "+val+" of field "+field.name+" is greater than expected maximum "+field.decimalMaximum);
+						}	
+						
+						
+						
+							
+						fieldObj[field.name]=val;
+					}
+				}
+		
+			}		
+
+		}
+		
+		
+		rv.extracted=Object. assign({}, fieldObj);
+					// TODO - process sourceRules
+
+
+
+
+		let tagEncodingOption = tagEncodingLevel.option.filter(byOptionKey(optionKey))[0];
+		let tagEncodingFields=tagEncodingOption.field;
+		
+
+		// do any necessary padding		
+		for (let tefi=0; tefi<tagEncodingFields.length; tefi++) {
+			let tefield=tagEncodingFields[tefi];
+			let v=fieldObj[tefield.name];
+			let v2=v.toString();
+			if (v2.length < tefield.length) {
+					let w=tefield.padChar.toString();
+				if (tefield.padDir == "LEFT") {
+					v=w.repeat(tefield.length-v2.length)+v;
+				}
+				if (tefield.padDir == "RIGHT") {
+					v=v+w.repeat(tefield.length-v2.length);
+				}
+				fieldObj[tefield.name]=v;
+			}
+		
+		}
+		
+		rv.padded=Object. assign({}, fieldObj);
+
+		
+		let targetOption=targetLevel.option.filter(byOptionKey(optionKey))[0];
+		let targetGrammar = targetOption.grammar;
+		
+		rv.targetGrammar=targetGrammar;
+		
+		let targetFields = targetOption.field;
+
+			// process targetRules
+
+		rv.targetRules=targetRules;
+					
+			for (let ri=0; ri<targetRules.length; ri++) {
+			
+				let rule=targetRules[ri];
+			
+				let k = rule.newFieldName;
+				let f = rule.function;
+
+					if (fn1.test(f)) {
+						let a=substitute(fn1.exec(f),fieldObj);
+						fieldObj[k]=a[0].toString().substr(a[1],a[2]);
+					}
+
+					if (fn2.test(f)) {
+						let a=substitute(fn2.exec(f),fieldObj);
+						fieldObj[k]=a[0].toString().substr(a[1]);
+					}
+
+					if (fn3.test(f)) {
+						let x=fn3.exec(f)[1].split(",");
+						x.unshift("");
+						let a=substitute(x,fieldObj);
+						fieldObj[k]=a.join("");
+					}
+
+					if (fn4.test(f)) {
+						let x=fn4.exec(f)[1].split(",");
+						x.unshift("");
+						let a=substitute(x,fieldObj);
+						fieldObj[k]=calculateCheckDigit(a[0].toString());
+					}
+
+
+
+
+				}
+		
+		var elements=targetGrammar.split(" ");
+		let finalOutput=[];
+		for (let ei=0; ei<elements.length; ei++) {
+			let e=elements[ei];
+			if (alpha.test(e)) {
+				finalOutput.push(fieldObj[e]);
+			} else {
+				let f=dequote.exec(e)[1];
+				finalOutput.push(f);
+			}
+		}
+		rv.result=finalOutput.join("");
+	
+		rv.optionKey=optionKey;
+		rv.fieldObj=fieldObj;
+
+	}
+	return rv;
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html> 
