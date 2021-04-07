@@ -6,5 +6,7 @@ At 2021-04-07 the repository only contains manually converted JSON definition fi
 Further testing of these is required before using these as templates for conversion of the other XML definition files for TDT.
 
 To reduce human errors, the plan is that the definition files will all be generated programmatically from a master file of essential parameters per EPC scheme.
+The master file probably looks something like this:
 
+https://docs.google.com/spreadsheets/d/1XfNGIUbY9wAMGoQ2nNW5dz5oi7MwPPSHMFeSjIA5rdY/edit?usp=sharing
 
